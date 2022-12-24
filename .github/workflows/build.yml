@@ -27,7 +27,7 @@ jobs:
       - name: Generate build files
         run: ./flutter/tools/gn
       
-      - name: Build:
+      - name: Build
         run: ninja -C out
 
       - name: Archive and upload build artifacts
@@ -35,4 +35,7 @@ jobs:
         with:
           name: build-files
           directory: out
-          path: *
+          path: |
+            *
+            */*
+            */**/*
