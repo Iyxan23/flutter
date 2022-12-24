@@ -18,8 +18,8 @@ jobs:
 
       - name: Install deps
       - run: |
-        sudo ./build/install-build-deps.sh
-        sudo ./flutter/build/install-build-deps-linux-desktop.sh
+          sudo ./build/install-build-deps.sh
+          sudo ./flutter/build/install-build-deps-linux-desktop.sh
       
       - name: Update dependencies
         run: gclient sync
