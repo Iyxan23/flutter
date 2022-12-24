@@ -1,6 +1,7 @@
 name: Build Flutter
 
-on: workflow_dispatch
+on:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -33,9 +34,5 @@ jobs:
       - name: Archive and upload build artifacts
         uses: RockLobster/archiving-upload-artifact@v0.2.1
         with:
-          name: build-files
+          name: out-files
           directory: out
-          path: |
-            *
-            */*
-            */**/*
